@@ -12,13 +12,13 @@ class Node:
 
 root = Node( Node ( Node( None, None, "aiu"), None, "fjal;"), Node(None, None, "qwer"), "root")
 
-stack = [root]
+queue = [root]
 
-def func(a, stack):
+def func(a, queue):
   if a==None:
     return
-  stack+=[a.left, a.right]
+  queue+=[a.left, a.right]
   print a.text
 
 root.write()
-print map(lambda a:func(a, stack), stack)
+print map(lambda a:func(a, queue), queue)
